@@ -1,0 +1,76 @@
+Create a Simple Project Locally:
+# Create project folder
+mkdir MyBitbucketProject
+cd MyBitbucketProject
+
+# Create a README file
+echo "Hello Bitbucket" > README.md
+
+# Optional: create a simple code file
+echo "print('Hello World')" > app.py
+
+Initialize Git Repository:
+git init
+git status  # Check untracked files
+
+Stage and Commit Files:
+git add README.md app.py
+git commit -m "Initial commit with README and app.py"
+
+Push to Remote Repository on Bitbucket
+Create a new repository on Bitbucket called MyBitbucketProject. don't include README.md as we are creating it manually
+Add the remote and push:
+git remote add origin https://<username>@bitbucket.org/<username>/MyBitbucketProject.git # BitBucket link
+git branch -M main
+git push -u origin main
+
+
+Create a New Branch:
+git checkout -b feature-branch
+
+Make Changes in the Feature Branch:
+echo "This is a new feature" >> README.md
+git status
+git diff
+git add README.md
+git commit -m "Added new feature description"
+
+Push Feature Branch to Bitbucket:
+git push -u origin feature-branch
+
+Merge Feature Branch into Main
+# Switch to main branch
+git checkout main
+
+# Merge feature branch:
+git merge feature-branch
+
+
+If there are conflicts, resolve them manually, then:
+
+git add README.md
+git commit -m "Resolved merge conflicts"
+
+Push Updated Main Branch
+git push origin main
+
+
+View Chronological Commit History
+# Detailed log
+git log
+
+# One-line summary
+git log --oneline
+
+Pull Changes on Local Machine
+
+If someone else pushed changes or you are on another machine:
+
+# Ensure you are on main
+git checkout main
+
+# Pull latest changes from remote
+git pull origin main
+
+
+
