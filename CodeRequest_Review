@@ -1,0 +1,52 @@
+Task 1: Repository Setup and Branching
+1️⃣ Create a new repository on Bitbucket
+Log in to Bitbucket
+Click Repositories → Create repository
+Enter:
+Repository name: bitbucket-demo
+Access level: Private or Public
+Click Create repository
+
+2️⃣ Clone the repository locally
+Copy the repository URL (HTTPS preferred):
+git clone https://bitbucket.org/<your-username>/bitbucket-demo.git
+Move into the project folder:
+cd bitbucket-demo
+
+3️⃣ Create a new branch: development
+git checkout -b development
+
+4️⃣ Add a new file
+echo "This is development branch work" > devfile.txt
+
+5️⃣ Add and commit the new file
+git add devfile.txt
+git commit -m "Added devfile.txt in development branch"
+
+6️⃣ Push the development branch to Bitbucket
+git push -u origin development
+
+🔹 Task 2: Pull Request and Code Review
+1️⃣ Create a pull request (PR)
+
+Go to Bitbucket:
+Open your repository
+Click Pull Requests
+Click Create pull request
+
+Choose:
+Source branch: development
+Destination branch: main
+
+2️⃣ Assign a reviewer
+In the pull request page, select Reviewer
+Choose yourself or another team member
+
+3️⃣ Add comments for code review
+Scroll to the code changes section
+Click on any line
+Add a comment (example: “Looks good, ready to merge”)
+
+4️⃣ Merge the Pull Request
+Click:
+Merge → Confirm Merge
